@@ -5,10 +5,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+
+      - run: mkdir ddev-tmp-project-folder/
+      
       - name: Setup DDEV
         uses: ddev/github-action-setup-ddev@v1
         with:
           autostart: false
+          ddevDir: ddev-tmp-project-folder
 
       # https://docs.typo3.org/m/typo3/tutorial-getting-started/11.5/en-us/Installation/TutorialDdev.html
       - run: |
@@ -18,5 +22,6 @@ jobs:
           ddev composer create "typo3/cms-base-distribution:^11"
           ddev typo3cms install:setup --admin-user-name="admin" --admin-password="password123" --site-name="test"
           # ddev launch typo3
+        working-directory: ddev-tmp-project-folder
 
       # TODO: Check somehow for http=200 on front- and backend?
