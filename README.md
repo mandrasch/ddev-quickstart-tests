@@ -1,0 +1,1 @@
+- Test https://ddev.readthedocs.io/en/latest/users/quickstart/ with help of https://github.com/ddev/github-action-setup-ddev (needs a modification, because there is no `.ddev/` directory in the beginning
