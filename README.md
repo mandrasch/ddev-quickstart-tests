@@ -1,1 +1,1 @@
-- Test https://ddev.readthedocs.io/en/latest/users/quickstart/ with help of https://github.com/ddev/github-action-setup-ddev in GitHub actions (needs a modification, because there is no `.ddev/` directory in the beginning
+- Test https://ddev.readthedocs.io/en/latest/users/quickstart/ with help of https://github.com/ddev/github-action-setup-ddev in GitHub actions
